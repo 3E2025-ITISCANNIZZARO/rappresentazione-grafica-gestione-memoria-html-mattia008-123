@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione della Memoria</title>
+    <style>
+        /* Il codice CSS va qui dentro */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
+        .container {
+            text-align: center;
+            width: 80%;
+        }
+
+        .memory {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .segment {
+            padding: 20px;
+            margin: 5px;
+            border-radius: 8px;
+            color: white;
+            text-align: center;
+        }
+
+        .text {
+            background-color: #4CAF50;
+        }
+
+        .data {
+            background-color: #2196F3;
+        }
+
+        .heap {
+            background-color: #FF9800;
+        }
+
+        .stack {
+            background-color: #F44336;
+        }
+
+        .legend {
+            margin-top: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .legend ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .legend li {
+            margin: 10px 0;
+        }
+
+        .text-color {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: #4CAF50;
+            margin-right: 10px;
+        }
+
+        .data-color {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: #2196F3;
+            margin-right: 10px;
+        }
+
+        .heap-color {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: #FF9800;
+            margin-right: 10px;
+        }
+
+        .stack-color {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: #F44336;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gestione della Memoria</h1>
+        <div class="memory">
+            <div class="segment text">
+                <h2>Text Segment</h2>
+                <p>Contiene il codice eseguibile.</p>
+            </div>
+            <div class="segment data">
+                <h2>Data Segment</h2>
+                <p>Contiene variabili globali e statiche.</p>
+            </div>
+            <div class="segment heap">
+                <h2>Heap</h2>
+                <p>Contiene la memoria allocata dinamicamente.</p>
+            </div>
+            <div class="segment stack">
+                <h2>Stack</h2>
+                <p>Contiene le chiamate alle funzioni e le variabili locali.</p>
+            </div>
+        </div>
+
+        <div class="legend">
+            <h2>Leggenda</h2>
+            <ul>
+                <li><span class="text-color"></span> <strong>Text Segment</strong>: Codice eseguibile.</li>
+                <li><span class="data-color"></span> <strong>Data Segment</strong>: Variabili globali e statiche.</li>
+                <li><span class="heap-color"></span> <strong>Heap</strong>: Memoria allocata dinamicamente.</li>
+                <li><span class="stack-color"></span> <strong>Stack</strong>: Chiamate alle funzioni e variabili locali.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
